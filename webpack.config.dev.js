@@ -2,9 +2,8 @@ import webpack from 'webpack';
 import path from 'path';
 
 export default {
-  mode: "development", // development = larger but quicker, production = smaller but no sourcemap/errors?
+  mode: 'development', // development = larger but quicker, production = smaller but no sourcemap/errors?
   devtool: 'inline-source-map',
-  stats: false, // reduce verbosity during compilation
   entry: [
     'eventsource-polyfill', // hot reloading with IE.
     'webpack-hot-middleware/client?reload=true', // reloads the page if hot module reloading fails.
@@ -17,8 +16,7 @@ export default {
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'src'),
-    noInfo: true // set true for less verbosity during development
+    contentBase: path.resolve(__dirname, 'src')
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

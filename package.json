@@ -2,7 +2,10 @@
   "name": "react-starter-app",
   "version": "1.0.0",
   "description": "React Starter App",
-  "scripts": {},
+  "scripts": {
+    "prestart": "babel-node tools/startMessage.js",
+    "start": "babel-node tools/srcServer.js"
+  },
   "author": "Mike Skaife",
   "license": "MIT",
   "dependencies": {

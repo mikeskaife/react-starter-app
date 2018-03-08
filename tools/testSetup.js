@@ -24,11 +24,13 @@ require.extensions['.png'] = function () {return null;};
 require.extensions['.jpg'] = function () {return null;};
 
 // Configure JSDOM and set global variables for fake DOM.
-var jsdom = require('jsdom').jsdom;
+var jsdom = require('jsdom');
+const { JSDOM } = jsdom;
 
 var exposedProperties = ['window', 'navigator', 'document'];
 
-global.document = jsdom('');
+const { document } = (new JSDOM('')).window;
+global.document = document;
 global.window = document.defaultView;
 Object.keys(document.defaultView).forEach((property) => {
   if (typeof global[property] === 'undefined') {

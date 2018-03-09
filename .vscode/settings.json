@@ -1,3 +1,10 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    // formatter must be available,
+    // editor must not be shutting down
+    "editor.formatOnSave": true,
+    // disable JavaScript formatting, use Prettier instead
+    "javascript.format.enable": false,
+    // use 'pretter-eslint' module instead of 'prettier'
+    "prettier.eslintIntegration": true
 }

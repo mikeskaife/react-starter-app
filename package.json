@@ -57,6 +57,7 @@
     "nock": "9.2.3",
     "npm-run-all": "4.1.2",
     "open": "0.0.5",
+    "prettier-eslint": "^8.8.1",
     "react-addons-test-utils": "15.6.2",
     "redux-immutable-state-invariant": "2.1.0",
     "redux-mock-store": "1.5.1",
